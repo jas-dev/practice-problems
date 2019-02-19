@@ -17,14 +17,14 @@ var gameArray=[
 
 console.log("Games Library: "+gameArray);
 
-var nameOutputArray= [];
 
 function longNames(string,array){
+    var nameOutputArray= [];
 
     for (var game= 0; game < array.length; game++){
 
         if(string.length < array[game].length){
-            nameOutputArray.push(array[game].valueOf());
+            nameOutputArray.push(array[game]);
 
         }
 

@@ -1,16 +1,13 @@
 
 
 
-var fibOutput= [];
 
 function fibonacci(num){
 
     //debugger;
+    var fibOutput= [0,1];
 
-    var a= 0;
-    var b= 1;
     var f= 1;
-    fibOutput.push(a,b);
     for(var i=2; i< num; i++){
 
         f= a + b;
