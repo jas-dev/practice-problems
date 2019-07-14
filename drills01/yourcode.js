@@ -41,10 +41,11 @@ function fitWithinVal(array,num){
         resultArray.push(array[index])
     }
     return resultArray;
+
 }
 
 
-function getAllNamesShorterThan(nameArray, value){
+function getAllNamesShorterThan(array, num){
     //loop through array
     //at each index position count the number of chars in string
     //create variable to store number of chars to be compared against
@@ -54,12 +55,12 @@ function getAllNamesShorterThan(nameArray, value){
         //otherwise push name to the new array
     //when end of nameArray is reached, exit loop
     //return new array
-    var shortestNames = null;
+    var shortestNames = [];
     var name = null;
 
-    for (index = 0; index < nameArray.length; index++){
-        name= nameArray[index];
-        if(name.length > value){
+    for (index = 0; index < array.length; index++){
+        name= array[index];
+        if(name.length > num){
           continue;
         }
         shortestNames.push(name);
@@ -68,6 +69,29 @@ function getAllNamesShorterThan(nameArray, value){
     return shortestNames;
 }
 
-function makeLabel(){
+function makeLabel(data) {
+    //create a local var to hold the return string value that is result of loop
+    //loop through object and find
+        //familyName
+        //givenName
+        //greeting
+        //home address
+            //loop through object that is value and find
+            //streetNumber
+            //streetname
+            //state
+            //zip
+            //city
+        //return each value as part of one big string, in the correct order
+
+    //or
+
+    //destructure key value pairs from the label data object
+    // return a template literal with the destructured variables in the correct order
+
+    var {greeting, familyName, givenName, "home address": {streetNumber, streetName, city, state, zip}} = data;
+
+    return `${greeting} ${givenName} ${familyName}\n${streetNumber} ${streetName}\n${city}, ${state} ${zip}`
+
 
 }
