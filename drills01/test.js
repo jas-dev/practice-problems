@@ -1,3 +1,4 @@
+
 var testVals = [{
   question: `sumArray: given an array of numbers, add up all the numbers
     for example: [1,5,3,2,6]
@@ -53,8 +54,8 @@ var testVals = [{
 }, {
   question: `given an object with data for a person in it, generate a 
   shipping label in the following form:
-    Miss Jane Doe<br>
-    123 Any St<br>
+    Miss Jane Doe
+    123 Any St
     Springfield, Ma 12345
     Please note that the next lines are generated via newlines`,
   testVals: {
@@ -70,5 +71,5 @@ Kansas City, Mo 63102`
     ]
   },
   functionToTest: 'makeLabel'
-}]
+}];
 
