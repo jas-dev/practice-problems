@@ -70,28 +70,19 @@ function getAllNamesShorterThan(array, num){
 }
 
 function makeLabel(data) {
-    //create a local var to hold the return string value that is result of loop
-    //loop through object and find
-        //familyName
-        //givenName
-        //greeting
-        //home address
-            //loop through object that is value and find
-            //streetNumber
-            //streetname
-            //state
-            //zip
-            //city
-        //return each value as part of one big string, in the correct order
+    //make a var that holds a template literal that is constructed by referencing key value pairs we need from the data object
 
+    var labelOutput = `${data.greeting} ${data.givenName} ${data.familyName}\n${data["home address"].streetNumber} ${data["home address"].streetName}\n${data["home address"].city}, ${data["home address"].state} ${data["home address"].zip}`;
+
+    return labelOutput;
     //or
 
     //destructure key value pairs from the label data object
     // return a template literal with the destructured variables in the correct order
 
-    var {greeting, familyName, givenName, "home address": {streetNumber, streetName, city, state, zip}} = data;
+    /*var {greeting, familyName, givenName, "home address": {streetNumber, streetName, city, state, zip}} = data;
 
-    return `${greeting} ${givenName} ${familyName}\n${streetNumber} ${streetName}\n${city}, ${state} ${zip}`
+    return `${greeting} ${givenName} ${familyName}\n${streetNumber} ${streetName}\n${city}, ${state} ${zip}`*/
 
 
 }
