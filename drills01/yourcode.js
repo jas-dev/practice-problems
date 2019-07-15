@@ -69,20 +69,24 @@ function getAllNamesShorterThan(array, num){
     return shortestNames;
 }
 
-function makeLabel(data) {
+function makeLabel(/*advanced way*/{greeting, familyName, givenName, "home address": {streetNumber, streetName, city, state, zip}}) {
+    /* novice way*/
     //make a var that holds a template literal that is constructed by referencing key value pairs we need from the data object
 
-    var labelOutput = `${data.greeting} ${data.givenName} ${data.familyName}\n${data["home address"].streetNumber} ${data["home address"].streetName}\n${data["home address"].city}, ${data["home address"].state} ${data["home address"].zip}`;
+    //var labelOutput = `${data.greeting} ${data.givenName} ${data.familyName}\n${data["home address"].streetNumber} ${data["home address"].streetName}\n${data["home address"].city}, ${data["home address"].state} ${data["home address"].zip}`;
 
-    return labelOutput;
+    //return labelOutput;
+
     //or
 
+    /*intermediate way*/
     //destructure key value pairs from the label data object
     // return a template literal with the destructured variables in the correct order
 
-    /*var {greeting, familyName, givenName, "home address": {streetNumber, streetName, city, state, zip}} = data;
+    //var {greeting, familyName, givenName, "home address": {streetNumber, streetName, city, state, zip}} = data;
 
-    return `${greeting} ${givenName} ${familyName}\n${streetNumber} ${streetName}\n${city}, ${state} ${zip}`*/
+
+    return `${greeting} ${givenName} ${familyName}\n${streetNumber} ${streetName}\n${city}, ${state} ${zip}`
 
 
 }
